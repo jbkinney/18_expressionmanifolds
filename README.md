@@ -1,8 +1,7 @@
 # Data and analysis scripts for:
 ## Forcier et al., 2018. *Precision dissection of cis-regulatory energetics in living cells.* bioRxiv preprint.
 
-Directories:
-
+Directory structure:
 * ``code/``: Python analysis scripts and Jupyter notebooks
 * ``data/``Metadata, raw data, and processed data for this study
   * ``constructs/``: DNA sequence constructs used in this study
