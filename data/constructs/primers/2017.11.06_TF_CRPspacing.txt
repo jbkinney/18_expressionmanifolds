@@ -1,0 +1,46 @@
+Aligned oligos:
+
+iJK20_R         ATCTAAGGT CTCCGCAACGCAATGAA
+*iJK20_R_crp+	ATCTAAGGT CTCCGCAACGCAATGAA TGTGACCTAGATCACA
+*iJK20_crp+               CTCCGCAACGCAATGAA TGTGACCTAGATCACA TTTGAGGGTCC
+iJK20_35_crp+51.5’                          TGTGACCTAGATCACA TTT                                   AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp+52.5’                          TGTGACCTAGATCACA TTTG                                  AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+53.5’                          TGTGACCTAGATCACA TTTGA                                 AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+54.5’                          TGTGACCTAGATCACA TTTGAG                                AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+55.5’                          TGTGACCTAGATCACA TTTGAGG                               AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+56.5’                          TGTGACCTAGATCACA TTTGAGGG                              AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+57.5’                          TGTGACCTAGATCACA TTTGAGGGT                             AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+58.5’                          TGTGACCTAGATCACA TTTGAGGGTC                            AGGCTTTACACCTG TTGCCTCCGGCTCGiJK20_35_crp+59.5’                          TGTGACCTAGATCACA TTTGAGGGTCC                           AGGCTTTACACCTG TTGCCTCCGGCTCG
+
+iJK20_35_crp60.5’                                            TTTGAGGGTCC                         C AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_wt’                                                 TTTGAGGGTCC                        CC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp62.5’                                            TTTGAGGGTCC                       CCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp63.5’                                            TTTGAGGGTCC                      ACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp64.5’                                            TTTGAGGGTCC                     TACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp65.5’                                            TTTGAGGGTCC                    ATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp66.5’                                            TTTGAGGGTCC                   GATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp67.5’                                            TTTGAGGGTCC                  GGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp68.5’                                            TTTGAGGGTCC                 TGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp69.5’                                            TTTGAGGGTCC                CTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp70.5’                                            TTTGAGGGTCC               ACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_71.5’                                               TTTGAGGGTCC              AACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp72.5’                                            TTTGAGGGTCC             GAACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp73.5’                                            TTTGAGGGTCC            TGAACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp74.5’                                            ttTgAGGgtCC CATTGTTCTG          TACCC AGGCTTTACACcTg tTGCcTCCGGCTCG
+iJK20_35_crp75.5’                                            TTTGAGGGTCC CATTGTTCTG         ATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp76.5’                                            TTTGAGGGTCC CATTGTTCTG        GATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp77.5’                                            TTTGAGGGTCC CATTGTTCTG       GGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp78.5’                                            TTTGAGGGTCC CATTGTTCTG      TGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp79.5’                                            TTTGAGGGTCC CATTGTTCTG     CTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp80.5’                                            TTTGAGGGTCC CATTGTTCTG    ACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp81.5’                                            TTTGAGGGTCC CATTGTTCTG   AACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp82.5’                                            TTTGAGGGTCC CATTGTTCTG  GAACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+iJK20_35_crp83.5’                                            TTTGAGGGTCC CATTGTTCTG TGAACTGGATACCC AGGCTTTACACCTG TTGCCTCCGGCTCG
+
+iJK20_35_crp87.5’	                                     ttTgAGGgtCC                     CTTG CATTGTTCTGTGAAC
+iJK20_35_crp91.5’	                                     ttTgAGGgtCC                 TCTCCTTG CATTGTTCTGTGAAC
+iJK20_35_crp92.5’	                                     ttTgAGGgtCC                TTCTCCTTG CATTGTTCTGTGAAC
+iJK20_35_crp93.5’	                                     ttTgAGGgtCC               CTTCTCCTTG CATTGTTCTGTGAAC
+iJK20_35_crp97.5’	                                     ttTgAGGgtCC           AGTTCTTCTCCTTG CATTGTTCTGTGAAC
+iJK20_crp102.5’                                              ttTgAGGgtCC      TGAAAAGTTCTTCTCCTTG CATTGTTCTGTGAAC
+iJK20_crp103.5’	                                             ttTgAGGgtCC     GTGAAAAGTTCTTCTCCTTG CATTGTTCTGTGAAC
+iJK20_crp104.5’ 	                                     ttTgAGGgtCC    AGTGAAAAGTTCTTCTCCTTG CATTGTTCTGTGAAC
+iJK20_35_crp_spacer’                                                                              CATTGTTCTGTGAAC TGGATACCCAGGCTTTACACcTg tTGCcTCCGGCTCG
+
+iJK20_L’                                                                                                          TTGCCTCCGGCTCG TATGTTGTGTGGATTTGTGAGAGACCAACAATCGGC
+
+
