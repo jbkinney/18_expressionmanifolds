@@ -2,10 +2,11 @@
 
 Directory structure:
 * ``code/``: Python analysis scripts and Jupyter notebooks
-* ``data/``Metadata, raw data, and processed data for this study
+* ``data/``: Metadata, raw data, and processed data for this study
   * ``constructs/``: DNA sequence constructs used in this study
   * ``literature/``: Data extracted from the prior literature
   * ``plate_reader/``: Raw data from plate reader used for Miller assays
+  * ``resamplings/``: Files of fits to bootstrap resamplings of the spacing libraries
   * ``glycerol_stocks.xlsx``: List of glycerol stocks used in this study
 * ``figures/``: Published figures
 * ``intermediate/``: Processed data
