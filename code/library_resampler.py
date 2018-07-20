@@ -1,27 +1,23 @@
 import os
-import pylab as py
 import pandas as pd
 import matplotlib
 import numpy as np
+import pylab as py
 import scipy.optimize as opt
 from random import randint
 from random import uniform
+import glob
+
+import pdb
 
 
-execfile(os.pardir+'/code/library_clusters.py')
-
-resamp_folder = os.pardir+'/data/resamplings'
-
-class Reaction: pass;
+exec(open(os.pardir+'/code/library_clusters.py').read(), globals())
 
 #code is in a folder at the same level as data
 datapath=os.pardir+'/data/'
 
-#plate_metadata is the path for the folder containing the spec sheets for each plate
-plate_metadata=datapath+'plate_reader/metadata/'
-
 #platelist is a list of all the spec sheets in the folder
-platelist=os.listdir(plate_metadata)
+platelist = glob.glob('../data/plate_reader/metadata/specs_*.py')
 
 #raw_data is the path for the folder containing the raw data for each plate
 raw_data=datapath+'plate_reader/raw/'
@@ -37,12 +33,15 @@ row_names=['A','B','C','D','E','F','G','H']
 col_names=['1','2','3','4','5','6','7','8','9','10','11','12']
 
 #plate_processor takes in the spec file for a plate and returns a dictionary of processed reaction data for the wells
-def plate_processor(plate):
-    specs=plate_metadata+plate
+def plate_processor(specs):
+    plate = specs.split('/')[-1]
+    #specs=plate_metadata+plate
     plate_rx=[]
     plate_rxn_dic={}
     
-    execfile(specs, globals())
+    #execfile(specs, globals())
+    print('Processing plate %s...'%specs)
+    exec(open(specs).read(), globals())
     
     #parse culture locations
     cultures_mat = py.zeros([num_rows, num_cols])
@@ -78,10 +77,10 @@ def plate_processor(plate):
     #processes the hh:mm:ss time into float minutes and appends them to rtim or otim
     for n in range(len(rxn_dataframe['Time'])):
         rtemp=rxn_dataframe['Time'][n].split(':')
-        rtemp=map(float,rtemp)
+        rtemp=list(map(float,rtemp))
     
         otemp=optics_dataframe['Time'][n].split(':')
-        otemp=map(float,otemp)
+        otemp=list(map(float,otemp))
     
         rtim.append(rtemp[0]*60.0+rtemp[1]+rtemp[2]/60.0)
         otim.append(otemp[0]*60.0+otemp[1]+otemp[2]/60.0)
@@ -96,8 +95,8 @@ def plate_processor(plate):
     for r in row_names:
         for c in col_names:
             #this does the float mapping for all the OD values
-            rxn_dataframe[r+c]=map(float,rxn_dataframe[r+c])
-            optics_dataframe[r+c]=map(float,optics_dataframe[r+c])
+            rxn_dataframe[r+c]=list(map(float,rxn_dataframe[r+c]))
+            optics_dataframe[r+c]=list(map(float,optics_dataframe[r+c]))
         
 
     with open(raw_data+growth_file, 'U') as f:
@@ -216,6 +215,7 @@ for plate in platelist:
     
 #make a panel of the reaction data for all plates
 temp_panel=pd.Panel(temp_df, minor_axis=["well","name","Miller meas","OD600","rxn rate","cAMP","volume","glycerol loc","OK seq?"])
+
 
 #This takes the panel of data and summarizes it
 raw_vals={}
@@ -392,7 +392,7 @@ def boot_resampler(construct, initializing, cycles):
 	array of arrays of the indices of the datapoints resampled to be fit
     """
     
-    print "resampling "+construct
+    print("resampling "+construct)
     lbasal=all_vects[construct]['bas']
     linduced=all_vects[construct]['ind']
     rns=all_vects[construct]['initial']
@@ -404,7 +404,6 @@ def boot_resampler(construct, initializing, cycles):
     cntr=0
     
     while cntr<cycles:
-        if cntr
     
         rtb=[]
         rti=[]
@@ -519,7 +518,7 @@ def boot_resampler_oc(construct, initializing, cycles):
 	array of arrays of the indices of the datapoints resampled to be fit
     """
     
-    print "resampling "+construct
+    print("resampling "+construct)
 
     cntr=0
     
