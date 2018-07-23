@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
-import pandas as pd
 import matplotlib.pyplot as plt
+import pdb
 
 
 def thermodynamic_model(t_sat, t_bg, P, F, alpha, beta=1):
@@ -102,7 +102,7 @@ def plot_manifold_measurements(ax,
 
 # Load all measurements
 def get_clonal_measurements_df():
-    data_file = '../data/clonal_measurements.txt'
+    data_file = '../intermediate/clonal_measurements.txt'
     data_df = pd.read_csv(data_file, sep='\t', comment='#')
     data_df.set_index('name', inplace=True)
     return data_df
@@ -111,9 +111,9 @@ def get_clonal_measurements_df():
 # Load c61 model parameters
 def get_resampled_params_df(architecture):
     files_dict = {
-        'c61':'../data/resampled_params_for_c61.txt',
-        'c71':'../data/resampled_params_for_c71.txt',
-        'occlusion':'../data/resampled_params_for_occlusion.txt'
+        'c61':'../intermediate/resampled_params_for_c61.txt',
+        'c71':'../intermediate/resampled_params_for_c71.txt',
+        'occlusion':'../intermediate/resampled_params_for_occlusion.txt'
     }
     assert architecture in files_dict, \
         'architecture = %s;  must be one of %s' %\
@@ -126,7 +126,7 @@ def get_resampled_params_df(architecture):
 
 
 def get_distance_params_df():
-    distance_file = '../data/params_versus_distance.txt'
+    distance_file = '../intermediate/params_versus_distance.txt'
     distance_df = pd.read_csv(distance_file, 
         delim_whitespace=True, comment='#')
     distance_df.set_index('distance', inplace=True)
