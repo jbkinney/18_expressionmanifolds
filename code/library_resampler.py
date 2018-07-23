@@ -10,6 +10,7 @@ import glob
 
 import pdb
 
+class Reaction: pass;
 
 exec(open(os.pardir+'/code/library_clusters.py').read(), globals())
 
@@ -21,6 +22,8 @@ platelist = glob.glob('../data/plate_reader/metadata/specs_*.py')
 
 #raw_data is the path for the folder containing the raw data for each plate
 raw_data=datapath+'plate_reader/raw/'
+
+resamp_folder=os.pardir+'/intermediate/resamplings'
 
 py.close('all')
 
