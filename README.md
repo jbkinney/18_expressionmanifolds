@@ -2,6 +2,8 @@
 
 Directory structure:
 * ``code/``: Python analysis scripts and Jupyter notebooks
+  * ``library_resampler.py``: Script for generating all bootstrap resamplings of the spacing libraries
+  * ``plate_processor.py``: Script for generating all intermediate files from raw data
 * ``data/``: Metadata, raw data, and processed data for this study
   * ``constructs/``: DNA sequence constructs used in this study
   * ``literature/``: Data extracted from the prior literature
