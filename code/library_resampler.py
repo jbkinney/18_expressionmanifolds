@@ -233,6 +233,10 @@ for plate in temp_panel:
         if nam=='RDM':
             continue
             
+        if nam=='blank': continue
+        
+        if cons_names['valid_clone'][nam]!=1.0: continue
+            
         if nam not in raw_vals:
             raw_vals[nam]={'bas':[], 'ind':[]}
         
