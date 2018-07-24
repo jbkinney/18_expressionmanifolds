@@ -8,8 +8,8 @@ Directory structure:
   * ``constructs/``: DNA sequence constructs used in this study
   * ``literature/``: Data extracted from the prior literature
   * ``plate_reader/``: Raw data from plate reader used for Miller assays
-  * ``resamplings/``: Files of fits to bootstrap resamplings of the spacing libraries
   * ``glycerol_stocks.xlsx``: List of glycerol stocks used in this study
 * ``figures/``: Published figures
 * ``intermediate/``: Processed data
+  * ``resamplings/``: Files of fits to bootstrap resamplings of the spacing libraries
 * ``protocols/``: Primary protocols used in this study
