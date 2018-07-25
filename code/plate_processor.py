@@ -20,6 +20,8 @@ datapath=os.pardir+'/data/'
 #platelist is a list of all the spec sheets in the folder
 platelist = glob.glob('../data/plate_reader/metadata/specs_*.py')
 
+shared_folder = os.pardir+'/intermediate/'
+
 #raw_data is the path for the folder containing the raw data for each plate
 raw_data=datapath+'plate_reader/raw/'
 
@@ -229,6 +231,10 @@ for plate in temp_panel:
         
         if nam=='RDM':
             continue
+            
+        if nam=='blank': continue
+        
+        if cons_names['valid_clone'][nam]!=1.0: continue
             
         if nam not in raw_vals:
             raw_vals[nam]={'bas':[], 'ind':[]}
@@ -584,7 +590,7 @@ for constr in occlusion_libs:
 resamplings={}
 
 for cons in lib_groups:
-    resamplings[cons]=pd.read_pickle(datapath+'resamplings/'+cons+'_thetas_100.pkl')
+    resamplings[cons]=pd.read_pickle(shared_folder+'resamplings/'+cons+'_thetas_100.pkl')
         
 
 #generates resampled_params_for_occlusion.txt
@@ -740,3 +746,9 @@ dist_summary_df = pd.DataFrame(dist_summary, index=dist_summary['dist'],
                                         'tsat','tsat_16','tsat_50','tsat_84',
                                         'tbg','tbg_16','tbg_50','tbg_84'])
 dist_summary_df.to_csv(shared_folder+'params_versus_distance.txt', sep='\t')
+
+with open(shared_folder+'params_versus_distance.txt', 'r+') as named_summary:
+    temp=named_summary.read()
+
+    with open(shared_folder+'params_versus_distance.txt', 'w+') as named_summary:
+        named_summary.write('distance'+temp)
