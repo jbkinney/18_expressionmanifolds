@@ -63,9 +63,10 @@ def plot_manifold_measurements(ax,
     num_outliers = 0
     for sample, label, color in samples_labels_colors:
         indices = [name[:len(sample)] == sample for name in df.index]
-        num_points += sum(indices)
+        tmp_df = df[indices].copy().dropna()  # Make sure no NaN!
+        num_points += len(tmp_df)
         #pdb.set_trace()
-        tmp_df = df[indices].copy()
+     
         tmp_df.dropna(inplace=True)
         if len(tmp_df)>=1:
             xs = tmp_df['median_basal'].values
