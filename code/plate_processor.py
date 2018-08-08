@@ -274,7 +274,7 @@ for sample in raw_vals:
     raw_screened[sample]={'bas':raw_bas_screened, 'ind':raw_ind_screened}
     
 
-summary={'name':[], 'location':[], 'median_u':[], 'median_i':[], 'num_u':[], 'num_i':[], 'all_u':[], 'all_i':[]}
+summary={'name':[], 'location':[], 'median_u':[], 'median_i':[], 'num_u':[], 'num_i':[], 'all_u':[], 'all_i':[], 'sequence':[]}
 
 for cons in med_vals:
     if cons=='blank' or cons=='RDM': continue
@@ -286,11 +286,12 @@ for cons in med_vals:
     summary['all_i'].append(raw_screened[cons]['ind'])
     summary['num_u'].append(len(raw_screened[cons]['bas']))
     summary['num_i'].append(len(raw_screened[cons]['ind']))
+    summary['sequence'].append(cons_names['sequence'][cons])
     
 #go one folder up then down into the intermediate folder to save the measurements as measurements.txt
 shared_folder = os.pardir+'/intermediate/'
 namfile='measurements.txt'
-all_sum = pd.DataFrame(summary, index=summary['name'], columns=[ 'location', 'median_u', 'median_i', 'num_u', 'num_i', 'all_u', 'all_i'])
+all_sum = pd.DataFrame(summary, index=summary['name'], columns=[ 'location', 'median_u', 'median_i', 'num_u', 'num_i', 'all_u', 'all_i', 'sequence'])
 all_sum.to_csv(shared_folder+namfile, sep='\t', na_rep=np.nan)
 
 #this puts the row labels back to rights, as 'name' gets clipped out
