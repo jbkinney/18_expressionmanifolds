@@ -29,5 +29,5 @@ Directory structure:
   * ``18.10.30_summary_gen.py``: Script for consolidating all intermediate processed data into summaries and results.xlsx
   * ``figures.ipynb``: iPython notebook for generating the files in ``figures/``
   * ``helper_functions.py``: Functions used in figures.ipynb
-  * ``plate_processor.py``: Script for generating all intermediate files from raw data
+  * ``plate_processor.py``: Script for processing raw data and generating plate_panel.pkl
 * ``summaries/``: Intermediate text files summarizing processed data
